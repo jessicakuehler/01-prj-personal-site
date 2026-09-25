@@ -1,1 +1,131 @@
-/* Add you CSS here */
+/* This sets the page background and text color */
+html {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #1f2933;
+  min-height: 100vh;
+}
+
+/* The hero section gives the title space at the top of the page */
+.hero {
+  background-color: #dfeaf7;
+  background-image: url("img/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px 60px;
+  text-align: center;
+}
+
+/* Style the profile picture so it looks like a small framed headshot */
+.profile-pic {
+  display: block;
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin: 0 auto 20px;
+  border: 6px solid #123456;
+  background-color: white;
+}
+
+/* Make the main title large and easy to read */
+h1 {
+  margin: 0;
+  font-size: 3rem;
+  color: white;
+  line-height: 1.2;
+}
+
+/* Center the single subtitle under the name */
+.subtitle-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Align the h2 and h3 headings in one centered row with lots of room for pictures/content underneath */
+.skill-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 500px;
+  margin-top: 24px;
+  padding: 0 20px;
+}
+
+.skill-row h2,
+.skill-row h3 {
+  margin: 0;
+  font-size: 2rem;
+  color: #123456;
+  text-align: center;
+}
+
+/* Make a centered three-column section with text on both sides and an image in the middle */
+.work-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 40px auto 0;
+  padding: 0 40px 80px;
+  max-width: 1200px;
+}
+
+.work-column {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.work-column h2,
+.work-column h3 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+  color: #123456;
+}
+
+.work-column p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #374151;
+  text-align: center;
+}
+
+.work-image-wrap {
+  width: 360px;
+  height: 260px;
+  border: 6px solid #123456;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.work-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  border: 0;
+  background-color: white;
+}
