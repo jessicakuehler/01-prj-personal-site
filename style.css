@@ -14,20 +14,34 @@ body {
 
 /* The hero section gives the title space at the top of the page */
 .hero {
+  position: relative;
   background-color: #dfeaf7;
-  background-image: url("img/hero-bg.jpg");
+  background-image: url("img/PXL_20240705_013202959.jpg");
   background-size: cover;
-  background-position: center;
-  padding: 60px 20px 60px;
+  background-position: center top;
+  padding: 40px 20px 60px;
   text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* Style the profile picture so it looks like a small framed headshot */
 .profile-pic {
   display: block;
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
+  border-radius: 50%;
   margin: 0 auto 20px;
   border: 6px solid #123456;
   background-color: white;
@@ -76,13 +90,32 @@ h1 {
 
 /* Make a centered three-column section with text on both sides and an image in the middle */
 .work-section {
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
-  margin: 40px auto 0;
-  padding: 0 40px 500px;
+  margin: -30px auto 0;
+  padding: 0 40px 40px;
   max-width: 1200px;
+}
+
+.work-section::before,
+.work-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #123456;
+}
+
+.work-section::before {
+  top: 30px;
+}
+
+.work-section::after {
+  bottom: 0;
 }
 
 .work-column {
@@ -100,6 +133,8 @@ h1 {
 
 .work-column h2,
 .work-column h3 {
+  position: relative;
+  top: 60px;
   margin: 0 0 12px;
   font-size: 2rem;
   color: #123456;
@@ -115,6 +150,8 @@ h1 {
 
 /* Give each skill its own light blue row */
 .skill-list {
+  position: relative;
+  top: 60px;
   width: 100%;
   list-style: none;
   margin: 0;
@@ -195,16 +232,37 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 350px;
+  margin-top: 120px;
+}
+
+.work-image-column > .work-image-wrap,
+.work-image-column > .work-row {
+  position: relative;
+  top: -20px;
 }
 
 .artwork-heading {
-  position: absolute;
-  top: 100%;
   width: 100%;
-  margin: 32px 0 0;
+  margin: 20px 0 10px;
   font-size: 2rem;
   color: #123456;
   text-align: center;
+}
+
+.about-me {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 0;
+  padding: 12px 16px;
+  background-color: #f3f8ff;
+  border: 2px solid #dfeaf7;
+  border-radius: 10px;
+  color: #123456;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .work-image-wrap {
@@ -280,12 +338,15 @@ h1 {
 }
 
 .additional-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-height: 220px;
   padding: 32px 40px;
   background-color: #123456;
-  background-image: url("img/hero-bg.jpg");
+  background-image: url("img/PXL_20240705_013202959.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center bottom;
   text-align: center;
 }
 
